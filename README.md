@@ -45,4 +45,6 @@ An application for personal note and viewing member notes, completed within appr
 
     - Implement error handling and display relevant alerts or messages.
     - Use Combine's @Published to manage notification messages.
-Running the tests
+#Testing
+
+    Write unit tests for ViewModel logic using XCTest
