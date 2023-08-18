@@ -46,13 +46,24 @@ class LoginViewModel: ObservableObject{
             if !isExsist{
                 self?.addUserToDatabase(username: username, appRouter: appRouter)
             }else{
-                self?.getUser(username: username, appRouter: appRouter)
+                self?.getUser(username: username){ user in
+                    if let user = user{
+                        AppStorage.cachedUser = user
+                        AppState.share.isLogined = true
+                        DispatchQueue.main.async {
+                            self?.isLogined = true
+                            appRouter.flow = .tabbar
+                        }
+                    }
+                    
+                    
+                }
                 
             }
         }
     }
     
-    func getUser(username: String, appRouter: AppRouter){
+    func getUser(username: String, completion: @escaping(MUser?) -> Void){
         let data = FirebaseManager.share.getUser(username: username)
         data.receive(on: DispatchQueue.global())
             .sink(receiveCompletion: { completion in
@@ -63,11 +74,8 @@ class LoginViewModel: ObservableObject{
                 case .finished:
                     break
                 }
-            }) { [weak self] user in
-                AppStorage.cachedUser = user
-                AppState.share.isLogined = true
-                self?.isLogined = true
-                appRouter.flow = .tabbar
+            }) { user in
+                completion(user)
             }.store(in: &cancellables)
     }
     

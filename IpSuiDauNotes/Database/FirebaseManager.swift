@@ -20,33 +20,16 @@ class FirebaseManager: ObservableObject{
             doc.getDocuments { snapshot, error in
                 if let error = error{
                     promise(.failure(error))
-                }else{
-                    if let snapshot = snapshot{
-                        do{
-                            if snapshot.documents.count == 0{
-                                promise(.success(false))
-                            }else{
-                                for doc in snapshot.documents{
-                                    let jsonData = try JSONSerialization.data(withJSONObject: doc.data(), options: [])
-                                    if let user = try JSONDecoder().decode(MUser.self, from: jsonData) as? MUser{
-                                        promise(.success(true))
-                                    }
-                                }
-                            }
-                            
-                            
-                        }catch{
-                            promise(.failure(error))
-                        }
-                        
-                    }
+                } else if let snapshot = snapshot {
+                    let userExists = !snapshot.documents.isEmpty
+                    promise(.success(userExists))
                 }
             }
         }
     }
     
-    func getUser(username: String) -> Future<MUser, Error>{
-        return Future<MUser, Error>{
+    func getUser(username: String) -> Future<MUser?, Error>{
+        return Future<MUser?, Error>{
             [weak self] promise in
             guard let doc = self?.db.collection("users") else { return }
             doc.whereField("username", isEqualTo: username)
@@ -65,7 +48,7 @@ class FirebaseManager: ObservableObject{
                             }
                             
                         }catch{
-                            promise(.failure(error))
+                            promise(.success(nil))
                         }
                         
                     }

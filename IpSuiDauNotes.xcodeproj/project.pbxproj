@@ -10,7 +10,6 @@
 		094280A52A8C754B0069F403 /* IpSuiDauNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094280A42A8C754B0069F403 /* IpSuiDauNotesApp.swift */; };
 		094280A92A8C754D0069F403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094280A82A8C754D0069F403 /* Assets.xcassets */; };
 		094280AC2A8C754D0069F403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094280AB2A8C754D0069F403 /* Preview Assets.xcassets */; };
-		094280B62A8C754E0069F403 /* IpSuiDauNotesTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094280B52A8C754E0069F403 /* IpSuiDauNotesTests.swift */; };
 		094280C02A8C754E0069F403 /* IpSuiDauNotesUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094280BF2A8C754E0069F403 /* IpSuiDauNotesUITests.swift */; };
 		094280C22A8C754E0069F403 /* IpSuiDauNotesUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094280C12A8C754E0069F403 /* IpSuiDauNotesUITestsLaunchTests.swift */; };
 		094974372A8D322B00F23476 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094974362A8D322B00F23476 /* LoginView.swift */; };
@@ -40,6 +39,9 @@
 		096615562A8E8AA300CD6623 /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096615552A8E8AA300CD6623 /* LoadingView.swift */; };
 		096615582A8E8F6000CD6623 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096615572A8E8F6000CD6623 /* SplashView.swift */; };
 		0966155A2A8E947800CD6623 /* UIApplicationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096615592A8E947800CD6623 /* UIApplicationExtension.swift */; };
+		0966155C2A8F319F00CD6623 /* LoginTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0966155B2A8F319F00CD6623 /* LoginTest.swift */; };
+		096615612A8F3DF200CD6623 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 096615602A8F3DF200CD6623 /* FirebaseFirestore */; };
+		096615632A8F4D9600CD6623 /* AddNoteTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096615622A8F4D9600CD6623 /* AddNoteTest.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -65,7 +67,6 @@
 		094280A82A8C754D0069F403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		094280AB2A8C754D0069F403 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		094280B12A8C754E0069F403 /* IpSuiDauNotesTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpSuiDauNotesTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		094280B52A8C754E0069F403 /* IpSuiDauNotesTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpSuiDauNotesTests.swift; sourceTree = "<group>"; };
 		094280BB2A8C754E0069F403 /* IpSuiDauNotesUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IpSuiDauNotesUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		094280BF2A8C754E0069F403 /* IpSuiDauNotesUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpSuiDauNotesUITests.swift; sourceTree = "<group>"; };
 		094280C12A8C754E0069F403 /* IpSuiDauNotesUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpSuiDauNotesUITestsLaunchTests.swift; sourceTree = "<group>"; };
@@ -92,6 +93,8 @@
 		096615552A8E8AA300CD6623 /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		096615572A8E8F6000CD6623 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
 		096615592A8E947800CD6623 /* UIApplicationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIApplicationExtension.swift; sourceTree = "<group>"; };
+		0966155B2A8F319F00CD6623 /* LoginTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginTest.swift; sourceTree = "<group>"; };
+		096615622A8F4D9600CD6623 /* AddNoteTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddNoteTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +113,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096615612A8F3DF200CD6623 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -130,6 +134,7 @@
 				094280B42A8C754E0069F403 /* IpSuiDauNotesTests */,
 				094280BE2A8C754E0069F403 /* IpSuiDauNotesUITests */,
 				094280A22A8C754B0069F403 /* Products */,
+				0966155F2A8F3DF200CD6623 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -169,7 +174,8 @@
 		094280B42A8C754E0069F403 /* IpSuiDauNotesTests */ = {
 			isa = PBXGroup;
 			children = (
-				094280B52A8C754E0069F403 /* IpSuiDauNotesTests.swift */,
+				0966155B2A8F319F00CD6623 /* LoginTest.swift */,
+				096615622A8F4D9600CD6623 /* AddNoteTest.swift */,
 			);
 			path = IpSuiDauNotesTests;
 			sourceTree = "<group>";
@@ -313,6 +319,13 @@
 			path = SettingsView;
 			sourceTree = "<group>";
 		};
+		0966155F2A8F3DF200CD6623 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -353,6 +366,9 @@
 				094280B32A8C754E0069F403 /* PBXTargetDependency */,
 			);
 			name = IpSuiDauNotesTests;
+			packageProductDependencies = (
+				096615602A8F3DF200CD6623 /* FirebaseFirestore */,
+			);
 			productName = IpSuiDauNotesTests;
 			productReference = 094280B12A8C754E0069F403 /* IpSuiDauNotesTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
@@ -483,7 +499,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				094280B62A8C754E0069F403 /* IpSuiDauNotesTests.swift in Sources */,
+				0966155C2A8F319F00CD6623 /* LoginTest.swift in Sources */,
+				096615632A8F4D9600CD6623 /* AddNoteTest.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -695,7 +712,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ACR677NH9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.application.IpSuiDauNotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -715,7 +732,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ACR677NH9J;
 				GENERATE_INFOPLIST_FILE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.application.IpSuiDauNotesTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -834,6 +851,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 094974532A8DC20500F23476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestoreSwift;
+		};
+		096615602A8F3DF200CD6623 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 094974532A8DC20500F23476 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

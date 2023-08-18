@@ -22,7 +22,7 @@ class NotesViewModel: ObservableObject{
                 self?.isLoading = false
                 switch completion{
                 case .failure(let error):
-                    self?.isShowAlert.toggle()
+                    self?.isShowAlert = true
                     self?.message = error.localizedDescription
                     break
                 case .finished:
@@ -32,13 +32,31 @@ class NotesViewModel: ObservableObject{
                 self?.isLoading = false
                 self?.listNotes = listnote
                 if listnote.count == 0{
-                    self?.isShowAlert.toggle()
+                    self?.isShowAlert = true
                     self?.message = "List note empty"
                 }
             }
             .store(in: &cancellables)
     }
+    
+    func validateForm(title: String, content: String) -> Bool{
+        if title.isEmpty{
+            self.message = "Please enter a note title"
+            self.isShowAlert = true
+            return false
+        }
+        if content.isEmpty{
+            self.message = "Please enter a note content"
+            self.isShowAlert = true
+            return false
+        }
+        return true
+    }
     func addNote(userid: String, username: String, title: String, content: String){
+        let validate = validateForm(title: title, content: content)
+        if !validate{
+            return
+        }
         self.isLoading = true
         let response = FirebaseManager.share.addNotes(title: title, content: content, username: username, userid: userid)
         response.receive(on: DispatchQueue.main)
