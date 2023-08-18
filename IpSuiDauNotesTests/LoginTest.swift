@@ -51,7 +51,7 @@ final class LoginTest: XCTestCase {
     func testGetUserFaild(){
         let expectation = XCTestExpectation(description: "get user success")
         viewModel.getUser(username: "asjkajnsdkja"){ user in
-            XCTAssertNotNil(user, "Get User Failded")
+            XCTAssertNil(user, "Get User Failded")
             expectation.fulfill()
         }
         wait(for: [expectation], timeout: 5.0)
