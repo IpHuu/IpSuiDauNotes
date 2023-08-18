@@ -1,6 +1,5 @@
 #IpSuiDauNote App
-
-Một ứng dụng để ghi chú cho thành viên.
+An application for personal note and viewing member notes, completed within approximately 16 hours.
 
 #Requirements
 
