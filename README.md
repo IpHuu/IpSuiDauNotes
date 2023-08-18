@@ -29,6 +29,7 @@ Một ứng dụng để ghi chú cho thành viên.
     - Create Firebase Manager classes to handle Firebase interactions
     - Implement Combine framework for reactive data binding and asynchronous operations.
     - Use UserDefault to store the application's state data.
+    - Utilize a combined Property Wrapper and Combine approach to seamlessly harness UserDefault, ensuring simplicity, consistency, increased reusability, and the ability to listen for changes.
     
 #User Management
 
