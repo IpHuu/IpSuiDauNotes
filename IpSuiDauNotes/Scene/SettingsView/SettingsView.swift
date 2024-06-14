@@ -32,7 +32,6 @@ struct SettingsView: View {
             }
             .padding(10)
         }
-        
     }
 }
 

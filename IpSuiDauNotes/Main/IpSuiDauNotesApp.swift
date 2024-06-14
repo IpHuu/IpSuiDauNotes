@@ -14,19 +14,20 @@ struct IpSuiDauNotesApp: App {
     @State private var isLoading = true
     var body: some Scene {
         WindowGroup {
-            if isLoading {
-                SplashView()
-                    .transition(.opacity)
-                    .animation(.easeInOut(duration: 1.0))
-                    .onAppear {
-                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                            isLoading = false
-                        }
-                    }
-            } else {
-                rootView
-                    .environmentObject(appRouter)
-            }
+            HomeView()
+//            if isLoading {
+//                SplashView()
+//                    .transition(.opacity)
+//                    .animation(.easeInOut(duration: 1.0))
+//                    .onAppear {
+//                        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+//                            isLoading = false
+//                        }
+//                    }
+//            } else {
+//                rootView
+//                    .environmentObject(appRouter)
+//            }
             
         }
     }

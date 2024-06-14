@@ -17,7 +17,6 @@ struct AddNoteView: View {
             Text("Add Notes")
                 .font(.largeTitle)
                 .bold()
-            Spacer()
             TextField("Title", text: $title)
                 .padding(20)
                 .background(
@@ -31,7 +30,6 @@ struct AddNoteView: View {
                     RoundedRectangle(cornerRadius: 8)
                         .stroke(Color.gray, lineWidth: 1)
                 )
-            Spacer()
             Button {
                 if let userid = user?.userid, let username = user?.username{
                     viewModel.addNote(userid: userid, username: username, title: title, content: content)
@@ -46,12 +44,13 @@ struct AddNoteView: View {
                         .bold()
                 }
             }.frame(width: 200, height: 60)
-        }.frame(maxWidth: .infinity, maxHeight: .infinity)
-            .alert(isPresented: $viewModel.isShowAlert) {
+        }
+        .frame(minWidth: 0, maxWidth: .infinity, minHeight: 0, maxHeight: .infinity, alignment: .top)
+        .alert(isPresented: $viewModel.isShowAlert) {
                 Alert(title: Text("Notification"),
                       message: Text(viewModel.message))
-            }.padding(20)
-            .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
+        }
+        .onAppear(perform: UIApplication.shared.addTapGestureRecognizer)
     }
 }
 

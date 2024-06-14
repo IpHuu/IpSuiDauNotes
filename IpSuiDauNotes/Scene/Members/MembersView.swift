@@ -9,6 +9,7 @@ import SwiftUI
 
 struct MembersView: View {
     @StateObject private var viewModel = MemebersViewModel()
+    @State private var isLoaded = false
     var body: some View {
         NavigationView {
             ZStack{
@@ -31,7 +32,11 @@ struct MembersView: View {
             
         }
         .onAppear(perform: {
-            viewModel.getMember()
+            if !isLoaded{
+                isLoaded = true
+                viewModel.getMember()
+            }
+            
         })
         
         

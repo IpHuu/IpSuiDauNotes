@@ -6,7 +6,6 @@
 //
 
 import SwiftUI
-
 struct ListNoteView: View {
     var user: MUser?
     @StateObject private var viewModel = NotesViewModel()

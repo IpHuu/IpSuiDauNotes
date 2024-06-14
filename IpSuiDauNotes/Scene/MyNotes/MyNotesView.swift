@@ -10,6 +10,7 @@ import Combine
 struct MyNotesView: View {
     var user: MUser?
     @ObservedObject private var viewModel = NotesViewModel()
+    @State private var isLoaded = false
     var body: some View {
         NavigationView {
             ZStack {
@@ -19,10 +20,13 @@ struct MyNotesView: View {
                             NoteRow(note: note)
                                 .frame(maxWidth: .infinity, alignment: .leading)
                             Button {
-                                viewModel.removeNote(note: note)
+                                
                             } label: {
                                 Image(systemName: "trash")
                             }.frame(width: 30, height: 30, alignment: .trailing)
+                                .onTapGesture {
+                                    viewModel.removeNote(note: note)
+                                }
 
                         }
                         
@@ -44,14 +48,19 @@ struct MyNotesView: View {
                 }
             }
         }
-        .navigationBarHidden(true)
         .onAppear(perform: {
-            if let username = user?.username{
-                viewModel.getNotes(username: username)
+            if !isLoaded{
+                isLoaded = true
+                if let username = user?.username{
+                    viewModel.getNotes(username: username)
+                }
             }
+            
         }).alert(isPresented: $viewModel.isShowAlert) {
             Alert(title: Text("Notification"),
-                  message: Text(viewModel.message))
+                  message: Text(viewModel.message), dismissButton: .default(Text("OK")){
+                viewModel.isShowAlert = false
+            })
         }
     }
 }

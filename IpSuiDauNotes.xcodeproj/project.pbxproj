@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		093454A12A9516FA00AE5E86 /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 093454A02A9516FA00AE5E86 /* HomeView.swift */; };
 		094280A52A8C754B0069F403 /* IpSuiDauNotesApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094280A42A8C754B0069F403 /* IpSuiDauNotesApp.swift */; };
 		094280A92A8C754D0069F403 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094280A82A8C754D0069F403 /* Assets.xcassets */; };
 		094280AC2A8C754D0069F403 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 094280AB2A8C754D0069F403 /* Preview Assets.xcassets */; };
@@ -62,6 +63,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		093454A02A9516FA00AE5E86 /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		094280A12A8C754B0069F403 /* IpSuiDauNotes.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IpSuiDauNotes.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		094280A42A8C754B0069F403 /* IpSuiDauNotesApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IpSuiDauNotesApp.swift; sourceTree = "<group>"; };
 		094280A82A8C754D0069F403 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -127,6 +129,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		0934549F2A9516E900AE5E86 /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				093454A02A9516FA00AE5E86 /* HomeView.swift */,
+			);
+			path = HomeView;
+			sourceTree = "<group>";
+		};
 		094280982A8C754B0069F403 = {
 			isa = PBXGroup;
 			children = (
@@ -200,6 +210,7 @@
 		0949742B2A8D314A00F23476 /* Scene */ = {
 			isa = PBXGroup;
 			children = (
+				0934549F2A9516E900AE5E86 /* HomeView */,
 				094974652A8E1CB600F23476 /* SettingsView */,
 				094974622A8E04CA00F23476 /* AddNoteView */,
 				094974612A8E04B300F23476 /* ListNoteView */,
@@ -490,6 +501,7 @@
 				094974502A8D4B0D00F23476 /* NoteRow.swift in Sources */,
 				0949743D2A8D378F00F23476 /* AppDelegate.swift in Sources */,
 				094974692A8E28E100F23476 /* MNotes.swift in Sources */,
+				093454A12A9516FA00AE5E86 /* HomeView.swift in Sources */,
 				0949745D2A8DC90F00F23476 /* AppState.swift in Sources */,
 				094280A52A8C754B0069F403 /* IpSuiDauNotesApp.swift in Sources */,
 			);
